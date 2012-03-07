@@ -11,7 +11,7 @@ set :haml, :format => :html5
 if ENV['RACK_ENV'] == 'development'
 	HOST = 'http://localhost:3000'
 else
-	HOST = 'http://refer.com'
+	HOST = 'http://referrrr.com'
 end
 # CONFIG END
 
@@ -28,7 +28,6 @@ end
 
 # just create a new user with no parent
 get '/new' do
-
 	if session[:id].nil?
 		# no cookie, first time, so make a new user with parent :id
 		if (redis.keys "users").nil?
