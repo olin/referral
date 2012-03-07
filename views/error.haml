@@ -1,0 +1,21 @@
+%html
+	%head
+		:css
+			body {
+				font-family: monospace;
+				width: 500px;
+				margin: 0 auto;
+				text-align: left;
+				padding-top: 20px;
+			}
+
+		%title Referral Game
+	%body
+		%h2 Error
+		%h3= "Oops. #{id} is not a valid user"
+
+		%hr
+		%p
+			Hacked together by
+			%a{:href => 'http://about.me/markchang'} Mark
+			%a{:href => 'http://twitter.com/mchang'} @mchang

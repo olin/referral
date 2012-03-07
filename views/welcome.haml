@@ -1,0 +1,31 @@
+%html
+	%head
+		:css
+			body {
+				font-family: monospace;
+				width: 500px;
+				margin: 0 auto;
+				text-align: left;
+				padding-top: 20px;
+			}
+
+		%title Referral Game
+	%body
+		%h2 Referral Game
+		%h3
+			- if id.nil?
+				<a href="/new">Click here</a> to create a new player.
+			- else
+				= "Welcome #{id}"
+
+		- if referral_url
+			%h3
+				Referral URL:
+				= "<a href=\"#{referral_url}\">#{referral_url}</a>"
+
+
+		%hr
+		%p
+			Hacked together by
+			%a{:href => 'http://about.me/markchang'} Mark
+			%a{:href => 'http://twitter.com/mchang'} @mchang

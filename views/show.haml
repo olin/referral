@@ -1,0 +1,28 @@
+%html
+	%head
+		:css
+			body {
+				font-family: monospace;
+				width: 500px;
+				margin: 0 auto;
+				text-align: left;
+				padding-top: 20px;
+			}
+
+		%title Referral Game
+	%body
+		%h2 User Profile
+		%h3
+			= "Viewing #{id}. Score: #{score}. Parent: #{parent_id}"
+		%h3
+			Referral URL:
+			= "<a href=\"#{referral_url}\">#{referral_url}</a>"
+
+		%h4
+			= "Your ID: #{my_id}"
+
+		%hr
+		%p
+			Hacked together by
+			%a{:href => 'http://about.me/markchang'} Mark
+			%a{:href => 'http://twitter.com/mchang'} @mchang
